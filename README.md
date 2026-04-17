@@ -74,6 +74,7 @@ These results highlight a recall-focused model that prioritizes minimizing misse
 
 ## Confusion Matrix
 ![Confusion Matrix](confusion_matrix.png)
+
 The confusion matrix shows that while the model successfully detects most fraud cases, it generates a high number of false positives. This reflects the recall-focused optimization strategy, where minimizing missed fraud cases is prioritized over reducing false alerts.
 
 
