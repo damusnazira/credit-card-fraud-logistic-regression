@@ -77,6 +77,13 @@ These results highlight a recall-focused model that prioritizes minimizing misse
 
 The confusion matrix shows that while the model successfully detects most fraud cases, it generates a high number of false positives. This reflects the recall-focused optimization strategy, where minimizing missed fraud cases is prioritized over reducing false alerts.
 
+## Precision–Recall Curve
+
+![Precision-Recall Curve](precision_recall_curve.png)
+
+The precision–recall curve provides a more informative view of model performance in imbalanced datasets. It shows how precision decreases as recall increases, highlighting the trade-off between detecting fraud cases and minimizing false positives.
+In this model, recall remains high while precision drops significantly, confirming that the model prioritizes detecting fraudulent transactions at the cost of generating false alerts.
+
 
 ## Limitations
 The model’s low precision may result in a high number of false positives, which could impact operational efficiency. Threshold optimization was not implemented, which could help improve the precision-recall balance.
