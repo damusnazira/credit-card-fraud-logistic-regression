@@ -72,6 +72,10 @@ In absolute terms, out of 98 fraud cases in the test set, the model correctly id
 
 These results highlight a recall-focused model that prioritizes minimizing missed fraud cases, while leaving room for improvement in reducing false positives through techniques such as threshold tuning.
 
+## Confusion Matrix
+![Confusion Matrix](confusion_matrix.png)
+The confusion matrix shows that while the model successfully detects most fraud cases, it generates a high number of false positives. This reflects the recall-focused optimization strategy, where minimizing missed fraud cases is prioritized over reducing false alerts.
+
 
 ## Limitations
 The model’s low precision may result in a high number of false positives, which could impact operational efficiency. Threshold optimization was not implemented, which could help improve the precision-recall balance.
