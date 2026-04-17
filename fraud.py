@@ -91,3 +91,37 @@ from sklearn.metrics import classification_report, roc_auc_score
 
 print(classification_report(y_test, y_pred))
 print("ROC-AUC:", roc_auc_score(y_test, y_proba))
+
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+# Create confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+
+# Plot it
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot()
+
+# Save image
+plt.title("Confusion Matrix - Fraud Detection")
+plt.savefig("confusion_matrix.png")
+plt.show()
+from sklearn.metrics import precision_recall_curve, auc
+
+# Compute precision-recall curve
+precision, recall, thresholds = precision_recall_curve(y_test, y_proba)
+
+# Compute AUC for PR curve
+pr_auc = auc(recall, precision)
+
+# Plot
+plt.figure()
+plt.plot(recall, precision, label=f'PR Curve (AUC = {pr_auc:.2f}')
+plt.xlabel("Recall")
+plt.ylabel("Precision")
+plt.title("Precision-Recall Curve")
+plt.legend()
+
+# Save image
+plt.savefig("precision_recall_curve.png")
+plt.show()
